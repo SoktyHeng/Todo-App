@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180.2deg, rgb(30, 33, 48) 6.8%, rgb(74, 98, 110) 131%);
+  padding: 10px;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 5px; 
+}
+
+.todo-app h2 {
+  color: #002765;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  border: 1px solid black;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 14px;
+}
+
+button {
+  border: 1px solid black;
+  outline: none;
+  padding: 10px 15px;
+  background: rgb(30, 33, 48);
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 40px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Styles for the checkmark icon using the ::before pseudo-element */
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  background-image: url(images/unchecked1.png);
+  background-size: cover;
+  background-position: center;
+  top: 9px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+/* Update the checkmark icon for checked tasks */
+ul li.checked::before {
+  background-image: url(images/checked1.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+ul li img {
+  width: 24px;
+  height: 24px;
+}
+
+
+
+
